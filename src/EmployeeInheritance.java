@@ -1,9 +1,14 @@
 import java.util.Scanner;
 
 class Employee {
-   
+ String  name
+ int age
+ int phoneNumber
+ String address
+ int salary
+ String specialization
 }
-
+class Officer extends Employee()
 // TODO: Create class Officer extends Employee
 // Add 'specialization' attribute
 
