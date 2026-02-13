@@ -20,11 +20,11 @@ class Manager extends Employee {
     String department;
 }
 
-public class Main {
+public class EmployeeInheritance {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-       
+        // Officer Data Entry
         Officer off = new Officer();
         off.name = sc.nextLine();
         off.age = Integer.parseInt(sc.nextLine());
@@ -33,7 +33,7 @@ public class Main {
         off.salary = Double.parseDouble(sc.nextLine());
         off.specialization = sc.nextLine();
 
-      
+        // Manager Data Entry
         Manager man = new Manager();
         man.name = sc.nextLine();
         man.age = Integer.parseInt(sc.nextLine());
@@ -42,6 +42,7 @@ public class Main {
         man.salary = Double.parseDouble(sc.nextLine());
         man.department = sc.nextLine();
 
+        // Output Officer Details
         System.out.println("Officer:");
         System.out.println(off.name);
         System.out.println(off.age);
@@ -50,7 +51,7 @@ public class Main {
         System.out.printf("%.0f\n", off.salary);
         System.out.println(off.specialization);
 
-       
+        // Output Manager Details
         System.out.println("Manager:");
         System.out.println(man.name);
         System.out.println(man.age);
