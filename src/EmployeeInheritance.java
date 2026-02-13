@@ -1,38 +1,64 @@
 import java.util.Scanner;
 
 class Employee {
- String  name
- int age
- int phoneNumber
- String address
- int salary
- String specialization
+    String name;
+    int age;
+    String phoneNumber;
+    String address;
+    double salary;
+
+    void printSalary() {
+        System.out.println(salary);
+    }
 }
-class Officer extends Employee()
-// TODO: Create class Officer extends Employee
-// Add 'specialization' attribute
 
-// TODO: Create class Manager extends Employee
-// Add 'department' attribute
+class Officer extends Employee {
+    String specialization;
+}
 
-public class EmployeeInheritance {
-   
+class Manager extends Employee {
+    String department;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       
+        Officer off = new Officer();
+        off.name = sc.nextLine();
+        off.age = Integer.parseInt(sc.nextLine());
+        off.phoneNumber = sc.nextLine();
+        off.address = sc.nextLine();
+        off.salary = Double.parseDouble(sc.nextLine());
+        off.specialization = sc.nextLine();
+
+      
+        Manager man = new Manager();
+        man.name = sc.nextLine();
+        man.age = Integer.parseInt(sc.nextLine());
+        man.phoneNumber = sc.nextLine();
+        man.address = sc.nextLine();
+        man.salary = Double.parseDouble(sc.nextLine());
+        man.department = sc.nextLine();
+
+        System.out.println("Officer:");
+        System.out.println(off.name);
+        System.out.println(off.age);
+        System.out.println(off.phoneNumber);
+        System.out.println(off.address);
+        System.out.printf("%.0f\n", off.salary);
+        System.out.println(off.specialization);
+
+       
+        System.out.println("Manager:");
+        System.out.println(man.name);
+        System.out.println(man.age);
+        System.out.println(man.phoneNumber);
+        System.out.println(man.address);
+        System.out.printf("%.0f\n", man.salary);
+        System.out.println(man.department);
         
-        // --- OFFICER INPUT ---
-        // Create Officer object
-        // Read name, age, phone, address, salary, specialization
-        // Hint: Use sc.nextLine() for strings to capture spaces, sc.nextInt() for numbers.
-        // Be careful with buffer clearing after nextInt()!
-        
-        // --- MANAGER INPUT ---
-        // Create Manager object
-        // Read name, age, phone, address, salary, department
-        
-        // --- OUTPUT ---
-        // Print "Officer:"
-        // Print officer details (one per line)
-        
-        // Print "Manager:"
-        // Print manager details (one per line)
-    
+        sc.close();
+    }
 }
