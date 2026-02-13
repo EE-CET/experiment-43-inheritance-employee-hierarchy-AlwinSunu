@@ -24,7 +24,7 @@ public class EmployeeInheritance {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Officer Data Entry
+        // Officer Input
         Officer off = new Officer();
         off.name = sc.nextLine();
         off.age = Integer.parseInt(sc.nextLine());
@@ -33,7 +33,7 @@ public class EmployeeInheritance {
         off.salary = Double.parseDouble(sc.nextLine());
         off.specialization = sc.nextLine();
 
-        // Manager Data Entry
+        // Manager Input
         Manager man = new Manager();
         man.name = sc.nextLine();
         man.age = Integer.parseInt(sc.nextLine());
@@ -42,22 +42,22 @@ public class EmployeeInheritance {
         man.salary = Double.parseDouble(sc.nextLine());
         man.department = sc.nextLine();
 
-        // Output Officer Details
+        // Officer Output
         System.out.println("Officer:");
         System.out.println(off.name);
         System.out.println(off.age);
         System.out.println(off.phoneNumber);
         System.out.println(off.address);
-        System.out.printf("%.0f\n", off.salary);
+        System.out.println(off.salary); // Prints with .0 as expected
         System.out.println(off.specialization);
 
-        // Output Manager Details
+        // Manager Output
         System.out.println("Manager:");
         System.out.println(man.name);
         System.out.println(man.age);
         System.out.println(man.phoneNumber);
         System.out.println(man.address);
-        System.out.printf("%.0f\n", man.salary);
+        System.out.println(man.salary); // Prints with .0 as expected
         System.out.println(man.department);
         
         sc.close();
